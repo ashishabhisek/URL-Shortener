@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ashishabhisek/URL-Shortener/issues"
   },
-  "homepage": "https://github.com/ashishabhisek/URL-Shortener#readme"
+  "homepage": "https://github.com/ashishabhisek/URL-Shortener#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.6.3"
+  }
 }
