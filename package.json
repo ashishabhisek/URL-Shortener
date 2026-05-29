@@ -4,7 +4,7 @@
   "description": "A simple URL shortener application that converts long links into short, shareable URLs with fast redirection and an easy-to-use interface.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "dependencies": {
     "express": "^5.2.1",
     "mongoose": "^9.6.3",
-    "nanoid": "^5.1.11"
+    "nodemon": "^3.1.14",
+    "shortid": "^2.2.17"
   }
 }
