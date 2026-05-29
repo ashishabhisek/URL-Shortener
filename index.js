@@ -1,6 +1,7 @@
 const express = require("express");
 const { connectToMongoDB } = require("./connect");
 const urlRoute = require("./routes/url");
+const URL = require("./models/url");
 
 const app = express();
 const PORT = 8001;
@@ -13,5 +14,8 @@ app.use(express.json());
 
 app.use("/url", urlRoute);
 
+app.get('/:shortid', (req,res) => {
+
+})
 
 app.listen(PORT, () => console.log(`Server Started at PORT = ${PORT}!!!`));
