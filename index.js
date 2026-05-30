@@ -10,6 +10,8 @@ connectToMongoDB("mongodb://localhost:27017/url-shortner")
     .then(() => console.log(" MongoDB connected !!!")
     );
 
+app.set("view engine", "ejs");
+
 app.use(express.json());
 
 app.use("/url", urlRoute);
