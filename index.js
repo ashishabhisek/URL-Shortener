@@ -16,6 +16,7 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
 
 app.use(express.json());
+app.use(express.urlencoded({ extended:  false }));
 
 
 
@@ -35,6 +36,9 @@ app.get('/:shortId', async (req, res) => {
             },
         }
     );
+    if (!entry) {
+        return res.status(404).send("Short URL not found");
+    }
     return res.redirect(entry.redirectURL);
 });
 
