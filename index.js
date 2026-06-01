@@ -16,14 +16,14 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
 
 app.use(express.json());
-app.use(express.urlencoded({ extended:  false }));
+app.use(express.urlencoded({ extended:  false }))
 
 
 
 app.use("/url", urlRoute);
 app.use("/", staticRoute);
 
-app.get('/url/:shortId', async (req, res) => {
+app.get('/:shortId', async (req, res) => {
     const shortId = req.params.shortId;
 
     const entry = await URL.findOneAndUpdate(
@@ -36,9 +36,6 @@ app.get('/url/:shortId', async (req, res) => {
             },
         }
     );
-    if (!entry) {
-        return res.status(404).send("Short URL not found");
-    }
     return res.redirect(entry.redirectURL);
 });
 
