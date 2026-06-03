@@ -19,6 +19,7 @@ async function handleGenerateNewShortURL(req, res) {
     const allUrls = await URL.find({});
 
     return res.render("home", {
+        id: shortId,
         urls: allUrls,
     });
 }
