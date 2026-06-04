@@ -24,6 +24,7 @@ app.use(express.urlencoded({ extended:  false }))
 
 
 app.use("/url", urlRoute);
+app.use("/user", userRoute);
 app.use("/", staticRoute);
 
 app.get('/:shortId', async (req, res) => {
